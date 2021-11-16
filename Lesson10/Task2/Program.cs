@@ -28,57 +28,5 @@ namespace Task2
             teacher.ShowAge();
         }
     }
-    public class SchoolPerson
-    {
-        public string SchoolName { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public int Age { get; set; }
-        public DateTime DateofBirth { get; set; }
-        public int CurrentClass { get; set; }
-        public int ShowAge { get; set; }
-        public void Greet()
-        {
-            var str = $"Hello {Name} {Surname}";
-            Console.WriteLine(str);
-        }
-        public void GoToClasses()
-        {
-
-        }
-
-    }
-    public class Student : SchoolPerson
-    {
-        public new void GoToClasses()
-        {
-            var result = $"I’m {Name} {Surname}, I am student and I'm going to class.";
-            Console.WriteLine(result);
-        }
-        public new void ShowAge()
-        {
-            var age = $"My age is 21 years old";
-            Console.WriteLine(age);
-        }
-    }
-    public class Teacher : SchoolPerson
-    {
-        public string subject;
-        public void Explain()
-        {
-
-            var result = $"Explanation begin on  {subject}";
-            Console.WriteLine(result);
-        }
-        public new void GoToClasses()
-        {
-            var result = $"I’m {Name} {Surname}, I am a teacher.";
-            Console.WriteLine(result);
-        }
-        public new void ShowAge()
-        {
-            var result = $"My age is 30 years old";
-            Console.WriteLine(result);
-        }
-    }
+    
 }
