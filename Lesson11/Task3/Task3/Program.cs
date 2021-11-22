@@ -32,7 +32,7 @@ namespace Task3
                 Console.WriteLine("to continue:enter true / to stand:enter false");
                 foreach (var item in nationalize.Country)
                 {
-                    Console.WriteLine($"Country:{item.CountryId},Probablity:{item.Probability}");
+                    Console.WriteLine($"Country:{item.Country_Id},Probablity:{item.Probability}");
                 }
 
                 isCountunie = Convert.ToBoolean(Console.ReadLine());
@@ -48,7 +48,7 @@ namespace Task3
 
     public class Country
     {
-        public string CountryId { get; set; }
+        public string Country_Id { get; set; }
         public double Probability { get; set; }
     }
 
