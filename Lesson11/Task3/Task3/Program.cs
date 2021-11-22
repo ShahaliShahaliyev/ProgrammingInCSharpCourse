@@ -30,6 +30,10 @@ namespace Task3
                 Console.WriteLine(nationalize.Name + " " + nationalize.Country);
 
                 Console.WriteLine("to continue:enter true / to stand:enter false");
+                foreach (var item in nationalize.Country)
+                {
+                    Console.WriteLine($"Country:{item.CountryId},Probablity:{item.Probability}");
+                }
 
                 isCountunie = Convert.ToBoolean(Console.ReadLine());
             } while (isCountunie);
