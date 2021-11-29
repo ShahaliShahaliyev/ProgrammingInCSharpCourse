@@ -8,9 +8,19 @@ namespace Task1
         static void Main(string[] args)
         {
             string path = @"C:\Users\Shahali\Downloads\Lesson12";
+            const string pictures = @"C:\Users\Shahali\Downloads\Lesson12\Image";
+            const string videos = @"C:\Users\Shahali\Downloads\Lesson12\Video";
+            const string text = @"C:\Users\Shahali\Downloads\Lesson12\Text";
+            const string music = @"C:\Users\Shahali\Downloads\Lesson12\Music";
+            const string office = @"C:\Users\Shahali\Downloads\Lesson12\Office";
+            const string others = @"C:\Users\Shahali\Downloads\Lesson12\Other";
+
 
             string[] directories = Directory.GetDirectories(path);
             string[] files = Directory.GetFiles(path);
+
+
+
             foreach (var directory in directories)
             {
                 Directory.Delete(directory);
@@ -19,19 +29,46 @@ namespace Task1
             {
                 switch (Path.GetExtension(file))
                 {
-                    case ".txt":
-                        File.Move(file, @"C:\Users\Shahali\Downloads\Lesson12\text", true);
+                    case ".jpg":
+                    case ".jpeg":
+                    case ".img":
+                    case ".png":
+                        {
+                            File.Move(file, pictures);
+                        }
                         break;
                     case ".mp4":
-                        File.Move(file, @"C:\Users\Shahali\Downloads\Lesson12\video", true);
+                        {
+                            File.Move (file, videos);
+                        }
+                        break;
+                    case ".txt":
+                    case ".doc":
+                    case ".docx":
+                    case ".faq":
+                        {
+                            File.Move(file, text);
+                        }
                         break;
                     case ".mp3":
-                        File.Move(file, @"C:\Users\Shahali\Downloads\Lesson12\music", true);
+                        {
+                            File.Move(file, music);
+                        }
                         break;
+                    case ".pptx":
+                    case ".pdf":
+                    case ".xps":
+                    case ".xml":
+                    case ".":
+                        {
+                            File.Move(file, office);
+                        }
+                        break ;
                     default:
-                        File.Move(file, @"C:\Users\Shahali\Downloads\Lesson12\other", true);
-                        break;
-
+                        {
+                            File.Move(file, others);
+                        }
+                            break;
                 }
             }
         }
