@@ -1,5 +1,6 @@
 ﻿using System;
-using System.IO;
+using System.Management;
+using System.Diagnostics;
 
 namespace Task2
 {
@@ -7,17 +8,17 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            int counOfRam = 0;
-            foreach ( DriveInfo ramInfo in DriveInfo.GetDrives())
-            {
-                if (ramInfo.DriveType == DriveType.Fixed)
-                {
-                    counOfRam++;
-                    Console.WriteLine($"Size of RAM:{ramInfo.TotalSize/ 1073741824} GB");
-                    Console.WriteLine($"Current storage:{ramInfo.TotalSize - ramInfo.TotalFreeSpace/ 1073741824} GB");
+            ObjectQuery objectQuery = new ObjectQuery("SELECT * FROM Win32_OperatingSystem");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(objectQuery);
+            ManagementObjectCollection results = searcher.Get();
 
-                }
-            }   
+            foreach (ManagementObject result in results)
+            {
+                Console.WriteLine("Total Visible Memory {0} KB",result["TotalVisibleMemorySize"]);
+                Console.WriteLine("Free Physical Memory {0} KB",result["FreePhysicalMemory"]);
+                Console.WriteLine("Total Virtual Memory {0} KB", result["TotalVirtualMemorySize"]);
+                Console.WriteLine("Free Virtual Memory {0} KB", result["FreeVirtualMemory"]);
+            }
         }
     }
 }
