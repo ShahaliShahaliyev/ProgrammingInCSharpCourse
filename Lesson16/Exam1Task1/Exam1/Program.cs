@@ -191,7 +191,7 @@ namespace Exam1
                             {
                                 foreach(Person thirdChild in secondChild.Children)
                                 {
-                                    //if (thirdChild.Children.Count != 0)
+                                    if (thirdChild.Children.Count != 0)
                                     {
                                         foreach (var fourthChild in thirdChild.Children)
                                         {
