@@ -6,12 +6,12 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("eded1");
+            Console.WriteLine("Enter first number:");
             float var1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("eded2");
+            Console.WriteLine("Enter second number:");
             float var2 = Convert.ToInt32(Console.ReadLine());
             float netice = var1 / var2;
-            Console.WriteLine(netice);
+            Console.WriteLine($"Result:{netice}");
 
         }
     }
