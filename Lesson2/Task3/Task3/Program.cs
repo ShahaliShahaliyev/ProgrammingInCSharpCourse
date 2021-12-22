@@ -2,18 +2,18 @@
 
 namespace Task3
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("radiusu daxil et");
-            double radius = float.Parse(Console.ReadLine());
+            Console.WriteLine("Enter radius:");
+             double radius = double.Parse(Console.ReadLine());
 
-            double perimetr = 2 * Math.PI * radius;
-            Console.WriteLine("perimetr : " + perimetr);
+            double perimeter = radius * Math.PI * 2; 
 
-            double sahe = Math.PI * radius * radius;
-            Console.WriteLine("sahe : " + sahe);
+            double area = radius *radius* Math.PI;
+
+            Console.WriteLine($"Perimeter:{perimeter}\n Area:{area}");
         }
     }
 }

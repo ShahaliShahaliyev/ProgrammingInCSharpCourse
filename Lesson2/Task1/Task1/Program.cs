@@ -1,15 +1,13 @@
 ﻿using System;
 
-namespace FirstProgrammingCourse
-
+namespace Task1
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("soz elave edin.");
-
-            char[] name = Console.ReadLine().ToCharArray();
+            Console.Write("Enter name:");
+           char[] name = Console.ReadLine().ToCharArray();
             Array.Reverse(name);
             Console.WriteLine(name);
         }
