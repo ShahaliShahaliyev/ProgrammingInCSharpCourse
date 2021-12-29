@@ -17,10 +17,10 @@ namespace Task1
                     Console.WriteLine($"Total size: {driveinfo.TotalSize/ 1048576}  MB");
                     Console.WriteLine($"Avaliable size: {driveinfo.AvailableFreeSpace/ 1048576} MB");
                     Console.WriteLine($"Used size:{driveinfo.TotalSize - driveinfo.TotalFreeSpace/ 1048576} MB" );
-                    
                 }
 
-            }    
+            }
+            Console.ReadLine();
         }
     }
 }
