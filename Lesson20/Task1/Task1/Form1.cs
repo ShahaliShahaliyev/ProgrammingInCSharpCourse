@@ -69,13 +69,11 @@ namespace Task1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\Shahali\Documents\Lesson20Students\1.txt";
+            string[] students = Directory.GetFiles(@"C:\Users\Shahali\Documents\Lesson20Students");
 
-            string[] readText = File.ReadAllLines(path);
-
-            foreach (string text in readText)
+            for (int i = 0; i < students.Length; i++)
             {
-                MessageBox.Show(text);
+                listBox1.Items.Add(File.ReadAllText(students[i]));
             }
         }
 
