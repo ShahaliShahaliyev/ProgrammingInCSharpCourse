@@ -11,7 +11,7 @@ namespace Task3
 
             double perimeter = radius * Math.PI * 2; 
 
-            double area = radius *radius* Math.PI;
+            double area = radius* radius* Math.PI;
 
             Console.WriteLine($"Perimeter:{perimeter}\n Area:{area}");
         }
