@@ -36,9 +36,19 @@ namespace StudentCreator
                 Id++;
             }
 
+            Student student = new Student();
+
+            if (radioButton1.Checked == true)
+            {
+                student.Gender = "Male";
+            }
+            else if (radioButton2.Checked == true)
+            {
+                student.Gender = "Fermale";
+            }
 
             var text = $"{int.Parse(textBox1.Text)} {textBox2.Text} {textBox3.Text}" +
-                $" {dateTimePicker1.Value} {textBox4.Text} {textBox5.Text} ";
+                $" {dateTimePicker1.Value} {textBox4.Text} {textBox5.Text}  {student.Gender}";
             var filePath = Path.Combine(FilePath, $"{Id}.txt");
             File.WriteAllText(filePath, text);
 

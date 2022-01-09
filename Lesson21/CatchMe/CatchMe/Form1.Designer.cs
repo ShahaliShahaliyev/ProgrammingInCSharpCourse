@@ -41,7 +41,8 @@
             this.CatchMe.TabIndex = 0;
             this.CatchMe.Text = "Catch me if you can";
             this.CatchMe.UseVisualStyleBackColor = false;
-            this.CatchMe.Click += new System.EventHandler(this.button1_Click);
+            this.CatchMe.Click += new System.EventHandler(this.CatchMe_Click);
+            this.CatchMe.MouseEnter += new System.EventHandler(this.CatchMe_MouseEnter);
             // 
             // Form1
             // 

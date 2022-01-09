@@ -56,6 +56,17 @@ namespace StudentCreator
                 listBox1.Items.Add(File.ReadAllText(students[i]));
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+
+            string[] students = Directory.GetFiles(FilePath);
+            for (int i = 0; i < students.Length; i++)
+            {
+                listBox1.Items.Add(File.ReadAllText(students[i]));
+            }
+        }
     }
     public class Student
     {

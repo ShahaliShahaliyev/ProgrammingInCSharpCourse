@@ -17,16 +17,19 @@ namespace CatchMe
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CatchMe_MouseEnter(object sender, EventArgs e)
         {
             Random random = new Random();
 
             var maxWidth = this.ClientSize.Width;
             var maxHeight = this.ClientSize.Height;
-             
-            this.CatchMe.Location = new Point(random.Next(maxWidth),random.Next(maxHeight));
 
-            MessageBox.Show("You WIN");
+            this.CatchMe.Location = new Point(random.Next(maxWidth), random.Next(maxHeight));
+        }
+
+        private void CatchMe_Click(object sender, EventArgs e)
+        {
+           MessageBox.Show("YOU WIN:)");
         }
     }
 }
