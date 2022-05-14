@@ -17,7 +17,6 @@ namespace Task1
             Console.WriteLine(area1);
             var perimeter1 = rectangle.Perimeter();
             Console.WriteLine(perimeter1);
-            
         }
     }
 }

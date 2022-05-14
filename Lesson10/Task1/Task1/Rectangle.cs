@@ -10,12 +10,22 @@ namespace Task1
     {
         protected double side1, side2;
 
-        public new double Area(double side1=5 , double side2  =6)
+        public new double Area()
         {
+            Console.WriteLine("Teref daxil edin");
+            double side1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Teref daxil edin");
+            double side2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("sahe:");
             return side1 * side2;
         }
-        public new double Perimeter(double side1 = 5, double side2 = 6)
+        public new double Perimeter()
         {
+            Console.WriteLine("Teref daxil edin");
+            double side1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Teref daxil edin");
+            double side2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Perimetr:");
             return 2*(side1 + side2);
         }
     }
